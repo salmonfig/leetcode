@@ -51,8 +51,12 @@ class Solution:
 
         if not cur_node:
             """
+            Optimization: incrementally remove the matched leaf node in Trie.
+
             After we found a word and removed the '$' symbol then we
-            cur_node is empty. Remove the parent node
+            cur_node is empty. Remove the parent node. Then all the parent
+            nodes get deleted as well until we get to a node that has another
+            word.
 
             this speeds up the case when the list of target words space is >> than the
             number of words on the board
