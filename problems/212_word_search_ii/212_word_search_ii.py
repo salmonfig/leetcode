@@ -51,8 +51,8 @@ class Solution:
 
         if not cur_node:
             """
-            we didn't find '$' i.e. cur_node is not the end of a word. 
-            After the backtrack, remove this and don't check again
+            After we found a word and removed the '$' symbol then we
+            cur_node is empty. Remove the parent node
 
             this speeds up the case when the list of target words space is >> than the
             number of words on the board
